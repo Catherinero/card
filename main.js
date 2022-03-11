@@ -1,20 +1,21 @@
 var canvas = new fabric.Canvas('myCanvas');
- var x= document.getElementById("myAudio");
+var x= document.getElementById("myAudio");
+var player_object= "";
 
-function new_image()
+function new_image() 
+{ 
+    fabric.Image.fromURL("BirthdayImage.jpg", function(Img)
+
 {
-	farbic.image.fromURL('BirthdayImage.jpg', function(Img) {}
-    block_image_object = Img;
-    
-    block_image_objects.scaleToWidth(700);  
-    block_image_objects.scaleToHeight(510);
-    block_image_objects.set(
-    top:0
-    });
-    canvas.add(block_image_object);
-    });
-}
+    player_object = Img; 
+    player_object.scaleToWidth(700);
+    player_object.scaleToHeight(510);
+    player_object.set({ top:0, left:0 });
+    canvas.add(player_object);
+        
+}); }
 
-function playSound(){
+
+function playsound(){
 x.play();	
 }
